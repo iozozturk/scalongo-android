@@ -14,9 +14,11 @@ import android.widget.TextView;
 
 import com.ismet.durt.R;
 import com.ismet.durt.models.responses.LoginResponse;
+import com.ismet.durt.utils.CredentialUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import hugo.weaving.DebugLog;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -76,7 +78,7 @@ public class LoginFragment extends BaseFragment {
         boolean cancel = false;
         View focusView = null;
 
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+        if (!TextUtils.isEmpty(password) && !CredentialUtils.isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
@@ -86,7 +88,7 @@ public class LoginFragment extends BaseFragment {
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
+        } else if (!CredentialUtils.isEmailValid(email)) {
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
@@ -98,14 +100,6 @@ public class LoginFragment extends BaseFragment {
             showProgress(true);
             login(email, password);
         }
-    }
-
-    private boolean isEmailValid(String email) {
-        return email.contains("@");
-    }
-
-    private boolean isPasswordValid(String password) {
-        return password.length() > 4;
     }
 
     private void showProgress(final boolean show) {
@@ -141,5 +135,10 @@ public class LoginFragment extends BaseFragment {
                 showProgress(false);
             }
         });
+    }
+
+    @OnClick(R.id.link_signup)
+    public void redirectToSignup(){
+        redirectToFragment(new SignupFragment(), new Bundle(), true);
     }
 }
