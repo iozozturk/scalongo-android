@@ -107,6 +107,7 @@ public class SignupFragment extends BaseFragment {
         }
     }
 
+    @DebugLog
     private void showProgress(final boolean show) {
         if (show) progressDialog.show();
         else progressDialog.hide();
