@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
-import com.ismet.durt.services.DurtService;
+import com.ismet.durt.sservices.DurtService;
 import com.ismet.durt.utils.Stash;
 
 import java.util.logging.Logger;

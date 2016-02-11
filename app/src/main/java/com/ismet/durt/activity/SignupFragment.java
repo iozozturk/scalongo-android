@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.ismet.durt.R;
-import com.ismet.durt.models.responses.GenericResponse;
+import com.ismet.durt.mmodels.responses.GenericResponse;
 import com.ismet.durt.utils.CredentialUtils;
 
 import butterknife.Bind;

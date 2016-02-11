@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.ismet.durt.R;
-import com.ismet.durt.services.DurtService;
+import com.ismet.durt.sservices.DurtService;
 import com.ismet.durt.utils.Stash;
 
 import java.util.logging.Logger;

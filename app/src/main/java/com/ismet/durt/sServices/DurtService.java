@@ -1,9 +1,9 @@
-package com.ismet.durt.services;
+package com.ismet.durt.sservices;
 
 //import com.facebook.stetho.okhttp3.StethoInterceptor;
 
-import com.ismet.durt.models.responses.GenericResponse;
-import com.ismet.durt.models.responses.LoginResponse;
+import com.ismet.durt.mmodels.responses.GenericResponse;
+import com.ismet.durt.mmodels.responses.LoginResponse;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
