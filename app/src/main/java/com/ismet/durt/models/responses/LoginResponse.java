@@ -1,4 +1,4 @@
-package com.ismet.durt.mmodels.responses;
+package com.ismet.durt.models.responses;
 
 /**
  * Created by ismet on 01/02/16.
